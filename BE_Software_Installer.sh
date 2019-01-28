@@ -69,7 +69,7 @@ function mode2 {
   print_brake 40
   echo -n "* Write Directory: "
   read DIR
-  apt-get update && apt-get upgrade -y  && apt install git -y && mkdir "$DIR" && cd "$DIR" && wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.8.1.2.zip && unzip bedrock-server-1.8.1.2.zip && rm -r bedrock-server-1.8.1.2.zip && git clone https://github.com/TheWalker0/startbs && chmod +x start.sh && apt-get install curl libcurl4 -y && cd startbs && screen -d -m -S Vanilla ./start.sh
+  apt-get update && apt-get upgrade -y  && apt install git -y && mkdir "$DIR" && cd "$DIR" && wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.8.1.2.zip && unzip bedrock-server-1.8.1.2.zip && rm -r bedrock-server-1.8.1.2.zip && git clone https://github.com/TheWalker0/startbs && cd startbs && chmod +x start.sh && apt-get install curl libcurl4 -y && screen -d -m -S Vanilla ./start.sh
 }
 
 function main {
