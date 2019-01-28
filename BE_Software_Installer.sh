@@ -69,7 +69,7 @@ function mode2 {
   print_brake 40
   echo -n "* Write Directory: "
   read DIR
-  apt-get update && apt-get upgrade -y && mkdir "$DIR" && cd "$DIR" && wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.8.1.2.zip && unzip bedrock-server-1.8.1.2.zip && rm -r bedrock-server-1.8.1.2.zip && git clone https://github.com/TheWalker0/startbs && chmod +x start.sh && apt-get install curl libcurl4 && screen -d -m -S Vanilla ./start.sh
+  apt-get update && apt-get upgrade -y  && apt install git -y && mkdir "$DIR" && cd "$DIR" && wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.8.1.2.zip && unzip bedrock-server-1.8.1.2.zip && rm -r bedrock-server-1.8.1.2.zip && git clone https://github.com/TheWalker0/startbs && chmod +x start.sh && apt-get install curl libcurl4 -y && screen -d -m -S Vanilla ./start.sh
 }
 
 function main {
@@ -94,7 +94,7 @@ function main {
   if [ "$MODE" == "1" ]; then
   	#apt-get update && apt-get upgrade -y && 
   	#apt install screen -y            dopo zip
-    apt-get update && apt-get upgrade -y && mkdir BedRock_Server_Software && cd BedRock_Server_Software && wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.8.1.2.zip && unzip bedrock-server-1.8.1.2.zip && rm -r bedrock-server-1.8.1.2.zip && apt install screen -y  && git clone https://github.com/TheWalker0/startbs && chmod +x start.sh && apt-get install curl libcurl4 && screen -d -m -S ./start.sh
+    apt-get update && apt-get upgrade -y && apt-get install git -y && mkdir BedRock_Server_Software && cd BedRock_Server_Software && wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.8.1.2.zip && unzip bedrock-server-1.8.1.2.zip && rm -r bedrock-server-1.8.1.2.zip && apt install screen -y  && git clone https://github.com/TheWalker0/startbs && chmod +x start.sh && apt-get install curl libcurl4 -y && screen -d -m -S ./start.sh
   elif [ "$MODE" == "2" ]; then
   	mode2
   else
